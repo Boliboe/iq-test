@@ -88,6 +88,7 @@ body{
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
 .buttons button.restart{
@@ -101,4 +102,9 @@ body{
 
 .buttons button.quit{
     color: #007bff;
+}
+
+.buttons button.quit:hover{
+    color: #fff;
+    background: #007bff;
 }
