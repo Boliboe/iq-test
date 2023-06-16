@@ -152,7 +152,7 @@ body{
     user-select: none;
 }
 
-.quiz-box header .timer .time-sec{
+.quiz-box header .timer .timer-sec{
      font-size: 18px;
      font-weight: 500;
      background: #343a40;
@@ -192,12 +192,57 @@ section .option-list .option{
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 section .option-list .option:hover{
-
+    color: #004085;
+    background: #cce5ff;
+    border-color: #b8daff;
 }
 
 .option-list .option:last-child{
     margin-bottom: 0px;
+}
+
+.option-list .option .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+    pointer-events: none;
+}
+
+.option-list .option .icon.tick{
+    color: #23903c;
+    border-color: #23903c;
+    background: #d4edda;
+}
+
+.option-list .option .icon.cross{
+    color: #a42834;
+    background: #f8d7da;
+    border-color: #a42834;
+}
+
+.quiz-box footer{
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-box footer .total-que span{
+    display: flex;
+    user-select: none;
+}
+
+footer .total-que span p{
+    font-weight: 500;
+    padding: 0 5px;
 }
