@@ -40,7 +40,7 @@ nextBtn.onclick = () => {
 function showQuestions(index){
     const queText = document.querySelector(".que-text");
     const optionList = document.querySelector(".option-list");
-    let queTag = '<span>' + questions[index].question + '</span>';
+    let queTag = '<span>' + questions[index].numb + "." + questions[index].question+ '</span>';
     let optionTag = '<div class="option">' + questions[index].options[0] + '<span></span></div>'
                     + '<div class="option">' + questions[index].options[1] + '<span></span></div>'
                     + '<div class="option">' + questions[index].options[2] + '<span></span></div>'
