@@ -20,9 +20,11 @@ continueBtn.onclick = () =>{
     infoBox.classList.remove("activeInfo"); //hide the info box
     quizBox.classList.add("activeQuiz"); //show the quiz box
     showQuestions(0);
+    queCounter(1);
 }
 
 let queCount = 0;
+let queNumb = 1;
 
 const nextBtn = quizBox.querySelector(".next-btn");
 
@@ -30,7 +32,9 @@ const nextBtn = quizBox.querySelector(".next-btn");
 nextBtn.onclick = () => {
     if(queCount < questions.length - 1){
         queCount++;
+        queNumb++;
         showQuestions(queCount);
+        queCounter(queNumb);
     }else{
         console.log("Questions completed")
     }
@@ -47,4 +51,10 @@ function showQuestions(index){
                     + '<div class="option">' + questions[index].options[3] + '<span></span></div>';
     queText.innerHTML = queTag;
     optionList.innerHTML = optionTag;
+}
+
+function queCounter(index){
+    const bottomQuesCounter = quizBox.querySelector(".total-que");
+    let totalQuesCountTag = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
+    bottomQuesCounter.innerHTML = totalQuesCountTag;
 }
