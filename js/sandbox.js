@@ -4,6 +4,7 @@ const infoBox = document.querySelector(".info-box");
 const exitBtn = infoBox.querySelector(".buttons .quit");
 const continueBtn = infoBox.querySelector(".buttons .restart");
 const quizBox = document.querySelector(".quiz-box");
+const optionList = document.querySelector(".option-list");
 
 // if Start Quiz Button Clicked
 startBtn.onclick = () =>{
@@ -43,7 +44,6 @@ nextBtn.onclick = () => {
 //getting questions and options from array
 function showQuestions(index){
     const queText = document.querySelector(".que-text");
-    const optionList = document.querySelector(".option-list");
     let queTag = '<span>' + questions[index].numb + "." + questions[index].question+ '</span>';
     let optionTag = '<div class="option">' + questions[index].options[0] + '<span></span></div>'
                     + '<div class="option">' + questions[index].options[1] + '<span></span></div>'
@@ -60,12 +60,25 @@ function showQuestions(index){
 function optionSelected(answer){
     let userAns = answer.textContent;
     let correctAns = questions[queCount].answer;
+    let allOptions = optionList.children.length;
     if(userAns == correctAns){
         answer.classList.add("correct");
         console.log("Answer is correct");
     }else{
         answer.classList.add("incorrect");
         console.log("Answer is wrong");
+
+        //if answers is incorrect then automatically selected the correct answer
+        for (let i = 0; i < allOptions; i++) {
+            if(optionList.children[i].textContent == correctAns){
+                optionList.children[i].setAttribute("class","option correct");
+            }
+        }
+    }
+
+    //when user selected disabled all options
+    for (let i = 0; i < allOptions; i++) {
+        optionList.children[i].classList.add("disabled");
     }
 }
 
