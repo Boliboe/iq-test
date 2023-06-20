@@ -246,6 +246,12 @@ section .option-list .option:hover{
     border-color: #a42834;
 }
 
+.option-list .option.correct{
+    color: #155724;
+    background: #d4edda;
+    border-color: #c3e6cb;
+}
+
 .quiz-box footer{
     height: 60px;
     width: 100%;
@@ -261,7 +267,7 @@ section .option-list .option:hover{
 }
 
 footer .total-que span p{
-    font-weight: 500;
+    font-weight: 700;
     padding: 0 5px;
 }
 
