@@ -6,6 +6,7 @@ const continueBtn = infoBox.querySelector(".buttons .restart");
 const quizBox = document.querySelector(".quiz-box");
 const timeCount = quizBox.querySelector(".timer .timer-sec");
 const timeLine = quizBox.querySelector("header .time-line");
+const timeOff = quizBox.querySelector("header .time-line");
 
 const optionList = document.querySelector(".option-list");
 
@@ -33,6 +34,7 @@ continueBtn.onclick = () =>{
 let queCount = 0;
 let queNumb = 1;
 let counTer;
+let counTerLine;
 let timeValue = 15;
 let widthValue =0;
 let userScore =0;
@@ -41,6 +43,27 @@ const nextBtn = quizBox.querySelector(".next-btn");
 const resultBox = document.querySelector(".result-box");
 const restartQuiz = resultBox.querySelector(".buttons .restart");
 const quitQuiz = resultBox.querySelector(".buttons .quit");
+
+restartQuiz.onclick = () =>{
+    quizBox.classList.add("activeQuiz");
+    resultBox.classList.remove("activeResult"); 
+    let queCount = 0;
+    let queNumb = 1;
+    let timeValue = 15;
+    let widthValue =0;
+    let userScore =0;
+    showQuestions(queCount);
+    queCounter(queNumb);
+    clearInterval(counTer);
+    startTimer(timeValue);
+    clearInterval(counTerLine);
+    startTimerLine(widthValue);
+    nextBtn.style.display = "none";
+}
+
+quitQuiz.onclick = () =>{
+    window.location.reload();
+}
 
 //if Next Button is Clicked
 nextBtn.onclick = () => {
@@ -144,6 +167,20 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counTer);
             timeCount.textContent = "00";
+
+            let correctAns = questions[queCount].answer;
+            let allOptions = optionList.children.length;
+             
+            for (let i = 0; i < allOptions; i++) {
+                if(optionList.children[i].textContent == correctAns){
+                    optionList.children[i].setAttribute("class","option correct");
+                    optionList.children[i].insertAdjacentHTML("beforeend", tickIcon);
+                }
+            }
+            for (let i = 0; i < allOptions; i++) {
+                optionList.children[i].classList.add("disabled");
+            }
+            nextBtn.style.display = "block";
         }
     }
 }
