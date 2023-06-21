@@ -4,7 +4,10 @@ const infoBox = document.querySelector(".info-box");
 const exitBtn = infoBox.querySelector(".buttons .quit");
 const continueBtn = infoBox.querySelector(".buttons .restart");
 const quizBox = document.querySelector(".quiz-box");
+// const timeCount = quizBox.querySelector(".timer .timer-sec");
+
 const optionList = document.querySelector(".option-list");
+
 
 // if Start Quiz Button Clicked
 startBtn.onclick = () =>{
@@ -57,6 +60,9 @@ function showQuestions(index){
     }
 }
 
+let tickIcon ='<div class="icon tick"><i class="ri-sun-line sun-icon"></i></i></div>';
+let crossIcon ='<div class="icon cross"><i class="ri-moon-line moon-icon"></i></i></div>';
+
 function optionSelected(answer){
     let userAns = answer.textContent;
     let correctAns = questions[queCount].answer;
@@ -64,14 +70,17 @@ function optionSelected(answer){
     if(userAns == correctAns){
         answer.classList.add("correct");
         console.log("Answer is correct");
+        answer.insertAdjacentHTML("beforeend", tickIcon);
     }else{
         answer.classList.add("incorrect");
         console.log("Answer is wrong");
+        answer.insertAdjacentHTML("beforeend", crossIcon);
 
         //if answers is incorrect then automatically selected the correct answer
         for (let i = 0; i < allOptions; i++) {
             if(optionList.children[i].textContent == correctAns){
                 optionList.children[i].setAttribute("class","option correct");
+                optionList.children[i].insertAdjacentHTML("beforeend", tickIcon);
             }
         }
     }
