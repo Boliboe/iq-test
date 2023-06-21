@@ -5,6 +5,7 @@ const exitBtn = infoBox.querySelector(".buttons .quit");
 const continueBtn = infoBox.querySelector(".buttons .restart");
 const quizBox = document.querySelector(".quiz-box");
 const timeCount = quizBox.querySelector(".timer .timer-sec");
+const timeLine = quizBox.querySelector("header .time-line");
 
 const optionList = document.querySelector(".option-list");
 
@@ -26,12 +27,14 @@ continueBtn.onclick = () =>{
     showQuestions(0);
     queCounter(1);
     startTimer(15);
+    startTimerLine(0);
 }
 
 let queCount = 0;
 let queNumb = 1;
 let counTer;
 let timeValue = 15;
+let widthValue =0;
 
 const nextBtn = quizBox.querySelector(".next-btn");
 
@@ -44,6 +47,9 @@ nextBtn.onclick = () => {
         queCounter(queNumb);
         clearInterval(counTer);
         startTimer(timeValue);
+        clearInterval(counTerLine);
+        startTimerLine(widthValue);
+        nextBtn.style.display = "none";
     }else{
         console.log("Questions completed")
     }
@@ -70,6 +76,7 @@ let crossIcon ='<div class="icon cross"><i class="ri-moon-line moon-icon"></i></
 
 function optionSelected(answer){
     clearInterval(counTer);
+    clearInterval(counTerLine);
     let userAns = answer.textContent;
     let correctAns = questions[queCount].answer;
     let allOptions = optionList.children.length;
@@ -95,6 +102,7 @@ function optionSelected(answer){
     for (let i = 0; i < allOptions; i++) {
         optionList.children[i].classList.add("disabled");
     }
+    nextBtn.style.display = "block";
 }
 
 function startTimer(time){
@@ -102,7 +110,25 @@ function startTimer(time){
     function timer(){
         timeCount.textContent = time;
         time--;
-        if
+        if (time < 9){
+            let addZero = timeCount.textContent;
+            timeCount.textContent = "0" + addZero;
+        }
+        if(time < 0){
+            clearInterval(counTer);
+            timeCount.textContent = "00";
+        }
+    }
+}
+
+function startTimerLine(time){
+    counTerLine = setInterval(timer, 29);
+    function timer(){
+        time += 1;
+        timeLine.style.width = time + "px";
+        if (time > 549){
+            clearInterval(counTerLine);
+        }
     }
 }
 
