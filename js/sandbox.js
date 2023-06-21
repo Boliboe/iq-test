@@ -4,7 +4,7 @@ const infoBox = document.querySelector(".info-box");
 const exitBtn = infoBox.querySelector(".buttons .quit");
 const continueBtn = infoBox.querySelector(".buttons .restart");
 const quizBox = document.querySelector(".quiz-box");
-// const timeCount = quizBox.querySelector(".timer .timer-sec");
+const timeCount = quizBox.querySelector(".timer .timer-sec");
 
 const optionList = document.querySelector(".option-list");
 
@@ -25,10 +25,13 @@ continueBtn.onclick = () =>{
     quizBox.classList.add("activeQuiz"); //show the quiz box
     showQuestions(0);
     queCounter(1);
+    startTimer(15);
 }
 
 let queCount = 0;
 let queNumb = 1;
+let counTer;
+let timeValue = 15;
 
 const nextBtn = quizBox.querySelector(".next-btn");
 
@@ -39,6 +42,8 @@ nextBtn.onclick = () => {
         queNumb++;
         showQuestions(queCount);
         queCounter(queNumb);
+        clearInterval(counTer);
+        startTimer(timeValue);
     }else{
         console.log("Questions completed")
     }
@@ -64,6 +69,7 @@ let tickIcon ='<div class="icon tick"><i class="ri-sun-line sun-icon"></i></i></
 let crossIcon ='<div class="icon cross"><i class="ri-moon-line moon-icon"></i></i></div>';
 
 function optionSelected(answer){
+    clearInterval(counTer);
     let userAns = answer.textContent;
     let correctAns = questions[queCount].answer;
     let allOptions = optionList.children.length;
@@ -88,6 +94,15 @@ function optionSelected(answer){
     //when user selected disabled all options
     for (let i = 0; i < allOptions; i++) {
         optionList.children[i].classList.add("disabled");
+    }
+}
+
+function startTimer(time){
+    counTer = setInterval(timer, 1000);
+    function timer(){
+        timeCount.textContent = time;
+        time--;
+        if
     }
 }
 
