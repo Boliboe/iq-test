@@ -6,7 +6,7 @@ const continueBtn = infoBox.querySelector(".buttons .restart");
 const quizBox = document.querySelector(".quiz-box");
 const timeCount = quizBox.querySelector(".timer .timer-sec");
 const timeLine = quizBox.querySelector("header .time-line");
-const timeOff = quizBox.querySelector("header .time-line");
+const timeOff = quizBox.querySelector("header .time-text");
 
 const optionList = document.querySelector(".option-list");
 
@@ -59,6 +59,7 @@ restartQuiz.onclick = () =>{
     clearInterval(counTerLine);
     startTimerLine(widthValue);
     nextBtn.style.display = "none";
+    timeOff.textContent = "Time Left";
 }
 
 quitQuiz.onclick = () =>{
@@ -77,7 +78,10 @@ nextBtn.onclick = () => {
         clearInterval(counTerLine);
         startTimerLine(widthValue);
         nextBtn.style.display = "none";
+        timeOff.textContent = "Time Left";
     }else{
+        clearInterval(counTer);
+        clearInterval(counTerLine);
         console.log("Questions completed")
         showResultBox();
     }
@@ -99,8 +103,8 @@ function showQuestions(index){
     }
 }
 
-let tickIcon ='<div class="icon tick"><i class="ri-sun-line sun-icon"></i></i></div>';
-let crossIcon ='<div class="icon cross"><i class="ri-moon-line moon-icon"></i></i></div>';
+let tickIcon ='<div class="icon tick"><i class="ri-checkbox-circle-line"></i></div>';
+let crossIcon ='<div class="icon cross"><i class="ri-close-circle-line"></div>';
 
 function optionSelected(answer){
     clearInterval(counTer);
@@ -167,6 +171,7 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counTer);
             timeCount.textContent = "00";
+            timeOff.textContent = "Time Off";
 
             let correctAns = questions[queCount].answer;
             let allOptions = optionList.children.length;
