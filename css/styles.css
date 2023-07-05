@@ -210,7 +210,7 @@ body{
 }
 
 section .option-list .option{
-    background: rgb(244, 253, 244);
+    background: rgb(246, 255, 240);
     border: 1px solid #8afbbd;
     border-radius: 5px;
     padding: 8px 15px;
@@ -224,9 +224,9 @@ section .option-list .option{
 }
 
 section .option-list .option:hover{
-    color: #004085;
-    background: #cce5ff;
-    border-color: #b8daff;
+    color: #008510;
+    background: #ccffd3;
+    border-color: #b8ffcc;
 }
 
 .option-list .option:last-child{
@@ -312,7 +312,7 @@ footer .next-btn{
 }
 
 footer .next-btn:hover{
-    background: #0263ca;
+    background: #006723;
 }
 
 .result-box{
