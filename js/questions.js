@@ -111,106 +111,106 @@ let questions = [
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 11,
+        question: "Which instrument does not produce sound waves that resembles harmonics?",
+        answer:"Cymbal",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Trumpet",
+            "Cymbal",
+            "Clarinet",
+            "Violin"
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 12,
+        question: "What are budgerigars?",
+        answer:"Birds",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Birds",
+            "Fish",
+            "Mammals",
+            "Snakes"
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 13,
+        question: "What is normally the shape of a cricket?",
+        answer:"Oval",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Triangular",
+            "Hexagonal",
+            "Rectangular",
+            "Oval"
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 14,
+        question: "In film production, what is the most used colour for chroma keying?",
+        answer:"Green",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Red",
+            "White",
+            "Green",
+            "Blue"
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 15,
+        question: "Which book draws parallels to Homer's Odyssey?",
+        answer:"Ulysses",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "1984",
+            "Lord of the Flies",
+            "Ulysses",
+            "The Sound and the Fury"
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 16,
+        question: "What do you call matter that does not enter chemical reactions?",
+        answer:"Inert",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Meek",
+            "Mundane",
+            "Inert",
+            "Reactive"
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 17,
+        question: "The pucks used in ice hockey consist of ...?",
+        answer:"Rubber",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Rubber",
+            "Granite",
+            "Tungsten",
+            "PVC"
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 18,
+        question: "Which of these cannot be found in Brazil?",
+        answer:"Machu Picchu",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Amazon",
+            "Machu Picchu",
+            "Jaguar",
+            "Rio de Janeiro"
         ]
     },
     {
-        numb: 5,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        numb: 19,
+        question: "Where does the Pope reside?",
+        answer:"Vatican City",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Cairo",
+            "Buenos Aires",
+            "Warsaw",
+            "Vatican City"
         ]
     },
     {
-        numb: 5,
+        numb: 20,
         question: "In what year was the dwarf planet named Pluto discovered?",
         answer:"1930",
         options: [
