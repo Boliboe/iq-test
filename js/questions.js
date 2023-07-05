@@ -211,13 +211,13 @@ let questions = [
     },
     {
         numb: 20,
-        question: "In what year was the dwarf planet named Pluto discovered?",
-        answer:"1930",
+        question: "Where is the city of Jericho?",
+        answer:"West Bank",
         options: [
-            "1975",
-            "1969",
-            "2001",
-            "1930"
+            "Sinai",
+            "West Bank",
+            "Hamad",
+            "Al Jazira"
         ]
     },
 
