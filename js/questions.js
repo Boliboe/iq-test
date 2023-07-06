@@ -220,5 +220,16 @@ let questions = [
             "Al Jazira"
         ]
     },
+    {
+        numb: 21,
+        question: "Where is the city of Jericho?",
+        answer:"West Bank",
+        options: [
+            "Sinai",
+            "West Bank",
+            "Hamad",
+            "Al Jazira"
+        ]
+    },
 
 ];
