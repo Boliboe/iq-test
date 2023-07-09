@@ -222,13 +222,24 @@ let questions = [
     },
     {
         numb: 21,
-        question: "Where is the city of Jericho?",
-        answer:"West Bank",
+        question: "What acronym reffered to the government of the ancient Roman Republic?",
+        answer:"SPQR",
         options: [
-            "Sinai",
-            "West Bank",
-            "Hamad",
-            "Al Jazira"
+            "SPQR",
+            "PONT",
+            "CCCP",
+            "WSOP"
+        ]
+    },
+    {
+        numb: 21,
+        question: "Which of these books was not written by one of the Bronte sisters?",
+        answer:"Vanity Fair",
+        options: [
+            "Vanity Fair",
+            "Wuthering Heights",
+            "Jane Eyre",
+            "Agnes Grey"
         ]
     },
 
