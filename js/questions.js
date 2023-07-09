@@ -232,7 +232,7 @@ let questions = [
         ]
     },
     {
-        numb: 21,
+        numb: 22,
         question: "Which of these books was not written by one of the Bronte sisters?",
         answer:"Vanity Fair",
         options: [
@@ -243,7 +243,7 @@ let questions = [
         ]
     },
     {
-        numb: 21,
+        numb: 23,
         question: "Which computer system is used in various sports to visually track the trajectory of the ball?",
         answer:"Hawk-Eye",
         options: [
@@ -251,6 +251,28 @@ let questions = [
             "Hawk-Eye",
             "Algo-View",
             "Shot-Sight"
+        ]
+    },
+    {
+        numb: 24,
+        question: "What force keeps the water in the oceans?",
+        answer:"Gravity",
+        options: [
+            "Air resistance",
+            "Magnetic force",
+            "Gravity",
+            "Friction"
+        ]
+    },
+    {
+        numb: 25,
+        question: "Which is a loseless compression format?",
+        answer:"ZIP",
+        options: [
+            "MPEG-2",
+            "MP3",
+            "None of these",
+            "ZIP"
         ]
     },
 
