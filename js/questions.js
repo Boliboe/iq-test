@@ -242,5 +242,16 @@ let questions = [
             "Agnes Grey"
         ]
     },
+    {
+        numb: 21,
+        question: "Which computer system is used in various sports to visually track the trajectory of the ball?",
+        answer:"Hawk-Eye",
+        options: [
+            "Alpha-Go",
+            "Hawk-Eye",
+            "Algo-View",
+            "Shot-Sight"
+        ]
+    },
 
 ];
